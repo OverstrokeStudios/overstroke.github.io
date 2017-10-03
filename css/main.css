@@ -1,0 +1,72 @@
+* { margin: 0px; padding: 0px; }
+
+header, section, footer, aside, nav, article, hgroup { display: flex; }
+
+@media screen and (min-width: 320px) {
+	header { display: flex; flex-direction: column; background: #222222; border-bottom: 1px solid #9dabae; justify-content: center; padding: 10px 40px 10px 40px; }
+		.nav { display: none; }
+		.header-wrapper { display: flex; justify-content: center; }
+	body { background: #1e2530; }
+		.container { background: #dddddd; margin: 40px; display: flex; justify-content: space-between; }
+		.main-column { order: 2; flex-basis: : 50%; background: #bbbbbb; }
+		.left-column { order: 1; width: 200px; background: #aaaaaa; }
+		.right-column { order: 3; flex: 1; flex-basis: 20%; background: #cccccc; }
+		.features { margin: 40px; display: flex; justify-content: space-between; }
+		.feature { margin-right: 40px; flex: 1; padding: 5px; }
+			#feat1 { background: #aaaaaa; }
+			#feat2 { background: #bbbbbb; }
+			#feat3 { background: #cccccc; }
+		.feature:last-child { margin-right: 0px; }
+}
+
+@media screen and (min-width: 575px) {
+	header { display: flex; flex-direction: column; background: #222222; border-bottom: 1px solid #9dabae; justify-content: center; padding: 10px 40px 0px 40px; }
+		.header-wrapper { display: flex; justify-content: center; }
+		.nav { list-style: none; display: flex; margin-bottom: 12px;}
+		.nav-border { border-right: 1px solid #9dabae; }
+		.nav-border:last-child { border: none; }
+		.nav li { border-radius: 5px; background: #222222; padding: 10px 12px 10px 12px; margin-left: 0px; }
+		.nav-option { background: #222222; transition: background 0.2s; }
+		.nav-option:hover { background: #2a2a2a; }
+		.nav a:link { font-family: "Comfortaa"; font-weight: 300; font-size: 16px; color: #9dabae; text-decoration: none; transition: color 0.1s;}
+		.nav a:visited { font-family: "Comfortaa"; font-weight: 300; font-size: 16px; color: #9dabae; text-decoration: none; transition: color 0.1s; }
+		.nav a:hover { color: #d9d9d9; }
+		.nav-option { display: block; }
+	body { background: #1e2530; }
+		.container { background: #dddddd; margin: 40px; display: flex; justify-content: space-between; }
+		.main-column { order: 2; flex-basis: : 50%; background: #bbbbbb; }
+		.left-column { order: 1; width: 200px; background: #aaaaaa; }
+		.right-column { order: 3; flex: 1; flex-basis: 20%; background: #cccccc; }
+		.features { margin: 40px; display: flex; justify-content: space-between; }
+		.feature { margin-right: 40px; flex: 1; padding: 5px; }
+			#feat1 { background: #aaaaaa; }
+			#feat2 { background: #bbbbbb; }
+			#feat3 { background: #cccccc; }
+		.feature:last-child { margin-right: 0px; }
+}
+
+@media screen and (min-width: 970px) {
+	header { display: flex; flex-direction: row; background: #222222; border-bottom: 1px solid #9dabae; justify-content: ; padding: 10px 0px 5px 0px; }
+		.wholehead { background: inherit; flex: 1; display: flex; justify-content: flex-start; max-width: 1000px; margin: 0px 40px 0px 40px; }
+		.nav { list-style: none; display: flex; margin-top: 49px; margin-left: 30px; margin-bottom: 12px;}
+		.nav-border { border-right: 1px solid #9dabae; }
+		.nav-border:last-child { border: none; }
+		.nav li { border-radius: 5px; background: #222222; padding: 10px 12px 10px 12px; margin-left: 0px; }
+		.nav-option { background: #222222; transition: background 0.2s; }
+		.nav-option:hover { background: #2d2d2d; }
+		.nav a:link { font-family: "Comfortaa"; font-weight: 300; font-size: 16px; color: #9dabae; text-decoration: none; transition: color 0.1s;}
+		.nav a:visited { font-family: "Comfortaa"; font-weight: 300; font-size: 16px; color: #9dabae; text-decoration: none; transition: color 0.1s; }
+		.nav a:hover { color: #d2d2d2; }
+		.nav-option { display: block; }
+	body { background: #1e2530; }
+		.container { background: inherit; margin: 40px; display: flex; justify-content: center; }
+		.main-column { max-width: 1000px; order: 2; flex-basis: : 50%; background: inherit; color: #cccccc; }
+		.main-column h2 { font-family: "Comfortaa"; border-bottom: 1px solid #9dabae; color: #d1d1d1; margin-bottom: 20px; }
+		.main-column p { font-family: "Quicksand"; font-weight: 300; margin: 10px 0px; }
+		.features { margin: 40px; display: flex; justify-content: space-between; }
+		.feature { margin-right: 40px; flex: 1; padding: 5px; }
+			#feat1 { background: #aaaaaa; }
+			#feat2 { background: #bbbbbb; }
+			#feat3 { background: #cccccc; }
+		.feature:last-child { margin-right: 0px; }
+}
