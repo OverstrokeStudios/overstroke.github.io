@@ -3,15 +3,15 @@
 header, section, footer, aside, nav, article, hgroup { display: flex; }
 
 @media screen and (min-width: 320px) {
-	header { display: flex; flex-direction: column; background: #222222; border-bottom: 1px solid #9dabae; justify-content: center; padding: 10px 40px 10px 40px; }
+	header { display: flex; flex-direction: column; background: #222222; border-bottom: 1px solid #9dabae; align-content: center; padding: 10px 40px 10px 40px; }
 		.nav { display: none; }
-		.header-wrapper { display: flex; justify-content: center; }
+		.header-wrapper { display: flex; align-content: center; }
 	body { background: #1e2530; }
-		.container { background: #dddddd; margin: 40px; display: flex; justify-content: space-between; }
+		.container { background: #dddddd; margin: 40px; display: flex; align-content: space-between; }
 		.main-column { order: 2; flex-basis: : 50%; background: #bbbbbb; }
 		.left-column { order: 1; width: 200px; background: #aaaaaa; }
 		.right-column { order: 3; flex: 1; flex-basis: 20%; background: #cccccc; }
-		.features { margin: 40px; display: flex; justify-content: space-between; }
+		.features { margin: 40px; display: flex; align-content: space-between; }
 		.feature { margin-right: 40px; flex: 1; padding: 5px; }
 			#feat1 { background: #aaaaaa; }
 			#feat2 { background: #bbbbbb; }
@@ -20,8 +20,8 @@ header, section, footer, aside, nav, article, hgroup { display: flex; }
 }
 
 @media screen and (min-width: 575px) {
-	header { display: flex; flex-direction: column; background: #222222; border-bottom: 1px solid #9dabae; justify-content: center; padding: 10px 40px 0px 40px; }
-		.header-wrapper { display: flex; justify-content: center; }
+	header { display: flex; flex-direction: column; background: #222222; border-bottom: 1px solid #9dabae; align-content: center; padding: 10px 40px 0px 40px; }
+		.header-wrapper { display: flex; align-content: center; }
 		.nav { list-style: none; display: flex; margin-bottom: 12px;}
 		.nav-border { border-right: 1px solid #9dabae; }
 		.nav-border:last-child { border: none; }
@@ -33,11 +33,11 @@ header, section, footer, aside, nav, article, hgroup { display: flex; }
 		.nav a:hover { color: #d9d9d9; }
 		.nav-option { display: block; }
 	body { background: #1e2530; }
-		.container { background: #dddddd; margin: 40px; display: flex; justify-content: space-between; }
+		.container { background: #dddddd; margin: 40px; display: flex; align-content: space-between; }
 		.main-column { order: 2; flex-basis: : 50%; background: #bbbbbb; }
 		.left-column { order: 1; width: 200px; background: #aaaaaa; }
 		.right-column { order: 3; flex: 1; flex-basis: 20%; background: #cccccc; }
-		.features { margin: 40px; display: flex; justify-content: space-between; }
+		.features { margin: 40px; display: flex; align-content: space-between; }
 		.feature { margin-right: 40px; flex: 1; padding: 5px; }
 			#feat1 { background: #aaaaaa; }
 			#feat2 { background: #bbbbbb; }
@@ -45,28 +45,303 @@ header, section, footer, aside, nav, article, hgroup { display: flex; }
 		.feature:last-child { margin-right: 0px; }
 }
 
-@media screen and (min-width: 970px) {
-	header { display: flex; flex-direction: row; background: #222222; border-bottom: 1px solid #9dabae; justify-content: ; padding: 10px 0px 5px 0px; }
-		.wholehead { background: inherit; flex: 1; display: flex; justify-content: flex-start; max-width: 1000px; margin: 0px 40px 0px 40px; }
-		.nav { list-style: none; display: flex; margin-top: 49px; margin-left: 30px; margin-bottom: 12px;}
-		.nav-border { border-right: 1px solid #9dabae; }
-		.nav-border:last-child { border: none; }
-		.nav li { border-radius: 5px; background: #222222; padding: 10px 12px 10px 12px; margin-left: 0px; }
-		.nav-option { background: #222222; transition: background 0.2s; }
-		.nav-option:hover { background: #2d2d2d; }
-		.nav a:link { font-family: "Comfortaa"; font-weight: 300; font-size: 16px; color: #9dabae; text-decoration: none; transition: color 0.1s;}
-		.nav a:visited { font-family: "Comfortaa"; font-weight: 300; font-size: 16px; color: #9dabae; text-decoration: none; transition: color 0.1s; }
-		.nav a:hover { color: #d2d2d2; }
-		.nav-option { display: block; }
-	body { background: #1e2530; }
-		.container { background: inherit; margin: 40px; display: flex; justify-content: center; }
-		.main-column { max-width: 1000px; order: 2; flex-basis: : 50%; background: inherit; color: #cccccc; }
-		.main-column h2 { font-family: "Comfortaa"; border-bottom: 1px solid #9dabae; color: #d1d1d1; margin-bottom: 20px; }
-		.main-column p { font-family: "Quicksand"; font-weight: 300; margin: 10px 0px; }
-		.features { margin: 40px; display: flex; justify-content: space-between; }
-		.feature { margin-right: 40px; flex: 1; padding: 5px; }
-			#feat1 { background: #aaaaaa; }
-			#feat2 { background: #bbbbbb; }
-			#feat3 { background: #cccccc; }
-		.feature:last-child { margin-right: 0px; }
+@media screen and (min-width: 1000px) {
+	header {
+		background: none;
+		position: fixed;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border: none;
+		padding: 0px;
+		display: block;
+		z-index: 5;
+	}
+		.wholehead {
+			background: #282d33;
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			max-width: none;
+			margin: 0px;
+			margin-top: 0px;
+			opacity: 0.9;
+		}
+		.wholehead #logo {
+			padding-top: 5px;
+			padding-left: 20px;
+		}
+		.social-media-wrapper {
+			width: 195px;
+			display: flex;
+			justify-content: flex-end;
+			padding-top: 33px;
+			padding-right: 30px;
+			border-bottom: 1px solid #9dabae;
+			margin-bottom: 5px;
+		}
+		.social-media-img {
+			padding-right: 20px;
+		}
+		.logo-wrapper {
+			width: 225px;
+			margin-bottom: 5px;
+			border-bottom: 1px solid #9dabae;
+		}
+		.header-wrapper {
+			flex: 1;
+			border-bottom: 1px solid #9dabae;
+			margin-bottom: 5px;
+			justify-content: center;
+		}
+		.nav {
+			list-style: none;
+			display: flex;
+			margin-top: 20px;
+			margin-bottom: 15px;
+		}
+		.nav-border {
+			border-right: 1px solid #9dabae;
+		}
+		.nav-border:last-child {
+			border: none;
+		}
+		.nav li {
+			border-radius: 5px;
+			background: inherit;
+			padding: 10px 12px 10px 12px;
+			margin-left: 0px;
+		}
+		.nav-option {
+			background: inherit;
+			transition: background 0.2s;
+		}
+		.nav-option:hover {
+			background: #434c56;
+		}
+		.nav a:link {
+			font-family: "Comfortaa";
+			font-weight: 300;
+			font-size: 18px;
+			color: #9dabae;
+			text-decoration: none;
+			transition: color 0.1s;
+		}
+		.nav a:visited {
+			font-family: "Comfortaa";
+			font-weight: 300;
+			font-size: 18px;
+			color: #9dabae;
+			text-decoration: none;
+			transition: color 0.1s;
+		}
+		.nav a:hover {
+			color: #d2d2d2;
+		}
+		.nav-option {
+		 	display: block;
+		}
+		.gradientdown{
+			width: 100%;
+			height: 10px;
+		    background: none; /* For browsers that do not support gradients */
+		    background: -webkit-linear-gradient(rgba(157, 171, 174, 1), rgba(157, 171, 174, 0)); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(rgba(157, 171, 174, 1), rgba(157, 171, 174, 0)); /* For Opera 11.1 to 12.0 */
+		    background: -moz-linear-gradient(rgba(157, 171, 174, 1), rgba(157, 171, 174, 0)); /* For Firefox 3.6 to 15 */
+		    background: linear-gradient(rgba(157, 171, 174, 1), rgba(157, 171, 174, 0)); /* Standard syntax */
+		 }
+		 .gradientup{
+		    margin-top: 5px;
+ 			width: 100%;
+ 			height: 10px;
+ 		    background: none; /* For browsers that do not support gradients */
+ 		    background: -webkit-linear-gradient(rgba(157, 171, 174, 0), rgba(157, 171, 174, 1)); /* For Safari 5.1 to 6.0 */
+ 		    background: -o-linear-gradient(rgba(157, 171, 174, 0), rgba(157, 171, 174, 1)); /* For Opera 11.1 to 12.0 */
+ 		    background: -moz-linear-gradient(rgba(157, 171, 174, 0), rgba(157, 171, 174, 1)); /* For Firefox 3.6 to 15 */
+ 		    background: linear-gradient(rgba(157, 171, 174, 0), rgba(157, 171, 174, 1)); /* Standard syntax */
+ 		 }
+	body {
+		background: #181d23;
+	}
+		.spacer {
+			height: 100px;
+		}
+		.main-wrapper {
+			background: #e1ebed;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			display: flex;
+			align-items: center;
+		}
+		.main-column {
+			width: 1000px;
+			padding-left: 15px;
+			padding-right: 15px;
+			background: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.backdrop {
+			max-width: 100%;
+			max-height: 800px;
+			width: auto;
+			height: auto;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+		.backdrop-container {
+			position: relative;
+			width: 100%;
+			background: inherit;
+			/*background: -webkit-linear-gradient(#181d23, #1b232d);
+			background: -o-linear-gradient(#181d23, #1b232d);
+			background: -moz-linear-gradient(#181d23, #1b232d);
+			background: linear-gradient(#181d23, #1b232d);*/
+		}
+		.backdrop-container p {
+			font-family: "Open Sans";
+			font-weight: 300;
+			font-size: 40px;
+			position: absolute;
+			text-align: center;
+		    top: 44%;
+		    left: 60%;
+			color: #9dabae;
+		}
+		.backdrop-container b {
+			font-weight: 400;
+			color: #bdcbce;
+		}
+		.main-column p {
+			font-family: "Comfortaa";
+			font-weight: 300;
+			font-size: 30px;
+			color: #9dabae;
+			text-decoration: none;
+			text-align: justify;
+		}
+		.main-column h2 {
+			width: 100%;
+			padding-top: 40px;
+			margin-bottom: 70px;
+			font-family: "Open Sans", serif;
+			font-size: 45px;
+			font-weight: 300;
+			color: #324359;
+			text-align: center;
+			border-bottom: 1px solid #324359;
+		}
+		.copyright {
+			flex: 1;
+			align-content: center;
+		}
+		.copyright p {
+			font-family: "Helvetica", sans-serif;
+			font-size: 14px;
+			color: #484d53;
+			text-align: center;
+		}
+		.maingradientdown{
+			width: 100%;
+			height: 6px;
+		    background: none; /* For browsers that do not support gradients */
+		    background: -webkit-linear-gradient(rgba(225, 235, 237, 1), rgba(225, 235, 237, 0)); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(rgba(225, 235, 237, 1), rgba(225, 235, 237, 0)); /* For Opera 11.1 to 12.0 */
+		    background: -moz-linear-gradient(rgba(225, 235, 237, 183, 1), rgba(225, 235, 237, 0)); /* For Firefox 3.6 to 15 */
+		    background: linear-gradient(rgba(225, 235, 237, 1), rgba(225, 235, 237, 0)); /* Standard syntax */
+		}
+		.maingradientup{
+			width: 100%;
+			height: 6px;
+		    background: none; /* For browsers that do not support gradients */
+		    background: -webkit-linear-gradient(rgba(225, 235, 237, 0), rgba(225, 235, 237, 1)); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(rgba(225, 235, 237, 0), rgba(225, 235, 237, 1)); /* For Opera 11.1 to 12.0 */
+		    background: -moz-linear-gradient(rgba(225, 235, 237, 0), rgba(225, 235, 237, 1)); /* For Firefox 3.6 to 15 */
+		    background: linear-gradient(rgba(225, 235, 237, 0), rgba(225, 235, 237, 1)); /* Standard syntax */
+		}
+		.feature {
+			margin-left: -6px;
+			height: 315px;
+			display: flex;
+			width: 100%;
+			margin-bottom: 60px;
+		}
+		.feature p {
+			font-family: "Open Sans";
+			font-weight: 300;
+			font-size: 20px;
+			color: #647b82;
+		}
+		.feature h3 {
+			font-family: "Comfortaa";
+			font-weight: 400;
+			font-size: 22px;
+			color: #546b72;
+		}
+		.feature #vid {
+			width: 560px;
+			display: block;
+			z-index: 1;
+		}
+		.feature #imgright {
+			width: 500px;
+		}
+		.feature .text-wrapper {
+			flex: 1;
+			padding-left: 20px;
+			padding-right: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.news-text-wrapper {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.feature #tright {
+			padding-left: 10px;
+			border-left: 1px solid #647b82;
+		}
+		.feature #tleft {
+			padding-right: 10px;
+			border-right: 1px solid #647b82;
+		}
+		#alignleft {
+			text-align: left;
+		}
+		#alignright {
+			text-align: right;
+		}
+		#steam {
+			width: 100%;
+			margin-left: 5px;
+			margin-top: -30px;
+		}
+		.quondam-banner {
+			background: url("../imgs/quondam_snapshot.png") 50% 50% no-repeat;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			width: 100%;
+			height: 400px;
+			display: flex;
+		}
+		.quondam-banner p {
+			font-family: "Cinzel";
+			font-weight: 900;
+			font-size: 70px;
+			color: #e1ebed;
+			position: absolute;
+			text-align: center;
+			left: 50%;
+			top: 250px;
+			margin-left: -265px;
+		}
+	footer {
+		margin: 30px;
+	}
 }
